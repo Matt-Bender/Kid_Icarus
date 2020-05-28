@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: commyloose_fly
+  m_Name: kobil_death
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: d503397ec6a0bb742ad6a149b27a62b1, type: 3}
-    - time: 0.23333333
-      value: {fileID: 21300000, guid: 37df456515c8ed4459eccf2d8b2b313c, type: 3}
-    - time: 0.46666667
-      value: {fileID: 21300000, guid: d503397ec6a0bb742ad6a149b27a62b1, type: 3}
+      value: {fileID: -1003011947818466900, guid: d1b72d5bcad2db641a6749df4d445823,
+        type: 3}
+    - time: 0.33333334
+      value: {fileID: 2313567254055592822, guid: d1b72d5bcad2db641a6749df4d445823,
+        type: 3}
+    - time: 0.6666667
+      value: {fileID: -7816960781046147224, guid: d1b72d5bcad2db641a6749df4d445823,
+        type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,20 +47,20 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d503397ec6a0bb742ad6a149b27a62b1, type: 3}
-    - {fileID: 21300000, guid: 37df456515c8ed4459eccf2d8b2b313c, type: 3}
-    - {fileID: 21300000, guid: d503397ec6a0bb742ad6a149b27a62b1, type: 3}
+    - {fileID: -1003011947818466900, guid: d1b72d5bcad2db641a6749df4d445823, type: 3}
+    - {fileID: 2313567254055592822, guid: d1b72d5bcad2db641a6749df4d445823, type: 3}
+    - {fileID: -7816960781046147224, guid: d1b72d5bcad2db641a6749df4d445823, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.70000005
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

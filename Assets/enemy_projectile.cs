@@ -17,9 +17,9 @@ public class enemy_projectile : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D c)
     {
-        if (c.gameObject.tag == "Enemy" || c.gameObject.tag == "EnemySquish")
-        {
-            Destroy(c.gameObject);
-        }
+        //if (c.gameObject.tag == "Enemy" || c.gameObject.tag == "EnemySquish")
+        //{
+        //    Destroy(c.gameObject);
+        //}
     }
     }

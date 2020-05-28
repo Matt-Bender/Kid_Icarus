@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public int health;
     GameManager instance;
     // Start is called before the first frame update
     void Start()
@@ -16,4 +17,20 @@ public class PlayerCollision : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        // Did GameObject tagged ”Enemy” hit Character
+        if (c.gameObject.tag == "Enemy")
+{
+            health -= 1; // Remove 1 health on Collision
+                         // Check if health is ZERO
+            if (health <= 0)
+            {
+                // Destroy GameObject Script is attached to
+                // when health is ZERO (Character)
+                Destroy(gameObject);
+            }
+        }
+    }
 }

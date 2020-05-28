@@ -10,6 +10,10 @@ TagManager:
   - Barrier
   - Enemy
   - EnemySquish
+  - BarrierUp
+  - BarrierDown
+  - BarrierLeft
+  - BarrierRight
   layers:
   - Default
   - TransparentFX

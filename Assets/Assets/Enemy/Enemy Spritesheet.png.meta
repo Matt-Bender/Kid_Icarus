@@ -2023,13 +2023,13 @@ TextureImporter:
     second: Enemy Spritesheet_672
   - first:
       213: -8638229708131647788
-    second: Enemy Spritesheet_673
+    second: Kobil Death_1
   - first:
       213: -1619943575516368924
     second: Enemy Spritesheet_674
   - first:
       213: 83875680450872983
-    second: Enemy Spritesheet_675
+    second: Kobil Death_3
   - first:
       213: -7779493684222562317
     second: Enemy Spritesheet_676
@@ -2053,7 +2053,7 @@ TextureImporter:
     second: Enemy Spritesheet_682
   - first:
       213: 271712381765817858
-    second: Enemy Spritesheet_683
+    second: Kobil Death_2
   - first:
       213: -3769810979212103392
     second: Enemy Spritesheet_684
@@ -2125,13 +2125,13 @@ TextureImporter:
     second: Enemy Spritesheet_706
   - first:
       213: -7211367757856533706
-    second: Kobil Death 2
+    second: Kobil Death_2
   - first:
       213: 4551162661792150698
     second: Enemy Spritesheet_708
   - first:
       213: -2456714694063438761
-    second: Kobil Death 3
+    second: Kobil Death_3
   - first:
       213: 2473344400184998744
     second: Enemy Spritesheet_710
@@ -2188,7 +2188,10 @@ TextureImporter:
     second: Enemy Spritesheet_727
   - first:
       213: 5212806687261150948
-    second: Kobil Death 1
+    second: Kobil Death_1
+  - first:
+      213: -4023759636982325201
+    second: Enemy Spritesheet_707
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2229,7 +2232,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -16431,7 +16434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_673
+      name: Kobil Death 1
       rect:
         serializedVersion: 2
         x: 265
@@ -16452,33 +16455,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_674
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 40
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4efab21a6edc489e0800000000000000
-      internalID: -1619943575516368924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy Spritesheet_675
+      name: Kobil Death 3
       rect:
         serializedVersion: 2
         x: 284
         y: 32
-        width: 18
+        width: 6
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -16641,13 +16623,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_683
+      name: Kobil Death 2
       rect:
         serializedVersion: 2
         x: 275
         y: 32
         width: 6
-        height: 7
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -17523,7 +17505,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kobil Death 1
+      name: Kobil Death_1
       rect:
         serializedVersion: 2
         x: 265
@@ -17544,7 +17526,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kobil Death 3
+      name: Kobil Death_3
       rect:
         serializedVersion: 2
         x: 284
@@ -17565,7 +17547,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kobil Death 2
+      name: Kobil Death_2
       rect:
         serializedVersion: 2
         x: 275
@@ -17573,7 +17555,7 @@ TextureImporter:
         width: 6
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
