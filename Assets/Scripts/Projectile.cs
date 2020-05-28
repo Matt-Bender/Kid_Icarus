@@ -20,7 +20,6 @@ public class Projectile : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D c)
     {
-        
         // Check if "Projectile" GameObject hits something not named "Player"
         // - Stops "Projectile" GameObject from being destroyed if it hits "Player" GameObject
         if (c.gameObject.tag != "Player")

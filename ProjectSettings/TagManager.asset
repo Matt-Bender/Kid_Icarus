@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Collectible
   - Barrier
+  - Enemy
+  - EnemySquish
   layers:
   - Default
   - TransparentFX
