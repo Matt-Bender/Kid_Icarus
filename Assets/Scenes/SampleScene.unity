@@ -3307,6 +3307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51d29be7f701ee44b07da9823e70b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
 --- !u!1 &637747377
 GameObject:
   m_ObjectHideFlags: 0
@@ -9525,7 +9526,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d503397ec6a0bb742ad6a149b27a62b1,
+      objectReference: {fileID: -267347764490950494, guid: d1b72d5bcad2db641a6749df4d445823,
         type: 3}
     - target: {fileID: 5143288915849193042, guid: f9205e504c3e2f34f990bd4baab588e1,
         type: 3}

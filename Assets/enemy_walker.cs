@@ -9,12 +9,15 @@ public class enemy_walker : MonoBehaviour
     public float speed;
     public bool isFacingRight;
 
+    Animator anim;
+
     public int health;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         if (!rb)
         {
             Debug.LogWarning("No Rigidbody 2D found...");
@@ -69,10 +72,15 @@ public class enemy_walker : MonoBehaviour
                          // Check if health is ZERO
             if (health <= 0)
             {
+                anim.SetBool("isDead", true);
                 // Destroy GameObject Script is attached to
                 // when health is ZERO (Enemy)
-                Destroy(gameObject);
+                
             }
         }
+    }
+    void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

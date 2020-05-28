@@ -2038,13 +2038,13 @@ TextureImporter:
     second: Enemy Spritesheet_677
   - first:
       213: -267347764490950494
-    second: Enemy Spritesheet_678
+    second: Commyloose death 1
   - first:
       213: 1488853441663698044
     second: Enemy Spritesheet_679
   - first:
       213: 6888028466730860859
-    second: Enemy Spritesheet_680
+    second: Commyloose death 3
   - first:
       213: 4794878182836819532
     second: Enemy Spritesheet_681
@@ -2056,7 +2056,7 @@ TextureImporter:
     second: Kobil Death_2
   - first:
       213: -3769810979212103392
-    second: Enemy Spritesheet_684
+    second: Commyloose death 2
   - first:
       213: 6688402051622210379
     second: Enemy Spritesheet_685
@@ -16518,7 +16518,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_678
+      name: Commyloose death 1
       rect:
         serializedVersion: 2
         x: 323
@@ -16539,34 +16539,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_679
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 40
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c748bf0215879a410800000000000000
-      internalID: 1488853441663698044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy Spritesheet_680
+      name: Commyloose death 3
       rect:
         serializedVersion: 2
         x: 342
         y: 32
-        width: 18
-        height: 16
+        width: 6
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -16644,13 +16623,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_684
+      name: Commyloose death 2
       rect:
         serializedVersion: 2
         x: 333
         y: 32
         width: 6
-        height: 7
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
