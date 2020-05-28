@@ -8,6 +8,9 @@ public class enemy_walker : MonoBehaviour
     SpriteRenderer sr;
     public float speed;
     public bool isFacingRight;
+
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,10 @@ public class enemy_walker : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
+        if (health <= 0)
+        {
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,5 +57,13 @@ public class enemy_walker : MonoBehaviour
             sr.flipX = !sr.flipX;
         }
         
+    }
+    public void EnemyDead()
+    {
+        health--;
+        if(health <= 0)
+        {
+            Animation.SetBool(isDead, "true");
+        }
     }
 }
