@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
 
     Animator anim;
     Rigidbody2D myRigidBody;
+    public float horizontalInput;
 
 
     private int counter = 0;
@@ -52,7 +53,7 @@ public class Movement : MonoBehaviour
     {
         //GetAxisRaw no smoothing - instantly goes from 0 to 1 or -1
         //GetAxis smoothing
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         myRigidBody.velocity = new Vector2(horizontalInput * speed, myRigidBody.velocity.y);
         anim.SetFloat("horizontalInput", Mathf.Abs(horizontalInput));
         //anim.SetBool("Jump", !isGrounded);

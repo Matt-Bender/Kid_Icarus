@@ -15,4 +15,11 @@ public class Teleport : MonoBehaviour
     {
         
     }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (Collider2D.gameObject.name == "Pit" || collision.gameObject.name == "Teleport Left")
+    //    {
+    //        Debug.LogWarning("Teleport");
+    //    }
+    //}
 }
