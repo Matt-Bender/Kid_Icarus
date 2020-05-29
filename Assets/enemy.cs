@@ -2,27 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy_flyer : MonoBehaviour
+public class enemy : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     SpriteRenderer sr;
     public float speed;
     public bool isFacingRight;
-
-    public bool goRight;
-    public bool goLeft;
-    public bool goUp;
-    public bool goDown;
 
     Animator anim;
     public int health;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-
         if (!rb)
         {
             Debug.LogWarning("No Rigidbody 2D found...");
@@ -37,10 +30,7 @@ public class enemy_flyer : MonoBehaviour
 
             Debug.LogWarning("Speed defaulted to 5");
         }
-
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-
-        
+        rb.velocity = new Vector2(speed, rb.velocity.y);
         if (health <= 0)
         {
             health = 5;
@@ -52,7 +42,6 @@ public class enemy_flyer : MonoBehaviour
     void Update()
     {
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "BarrierLeft")
@@ -71,6 +60,7 @@ public class enemy_flyer : MonoBehaviour
         {
             rb.velocity = new Vector2(0, -speed);
         }
+
 
     }
     void OnCollisionEnter2D(Collision2D c)

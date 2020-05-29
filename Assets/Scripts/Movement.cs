@@ -67,7 +67,6 @@ public class Movement : MonoBehaviour
             //then resets counter
             if (JumpForce > 200)
             {
-                Debug.Log("Super Jump");
                 counter++;
                 if(counter >= 5)
                 {

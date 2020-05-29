@@ -14,8 +14,8 @@ TagManager:
   - BarrierDown
   - BarrierLeft
   - BarrierRight
-  - TPRight
-  - TPLeft
+  - EnemyWalk
+  - EnemyFly
   layers:
   - Default
   - TransparentFX

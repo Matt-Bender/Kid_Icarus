@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollectibleSpawn : MonoBehaviour
 {
-    public GameObject heartPrefab;
+    public static GameObject heartPrefab;
     public GameObject featherPrefab;
     // Start is called before the first frame update
     void Start()
@@ -25,5 +25,9 @@ public class CollectibleSpawn : MonoBehaviour
     void Update()
     {
         
+    }
+    public static void spawnItem(GameObject gameObject)
+    {
+        Instantiate(heartPrefab, gameObject.transform.position, gameObject.transform.rotation);
     }
 }

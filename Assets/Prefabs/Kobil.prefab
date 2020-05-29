@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9106561541291583507}
   - component: {fileID: 9106561541291583504}
   - component: {fileID: 9106561541291583505}
-  - component: {fileID: 9106561541291583510}
   - component: {fileID: 9106561541291583511}
   m_Layer: 0
   m_Name: Sprite
@@ -130,20 +129,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &9106561541291583510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106561541291583509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ce5b8a06c9069b468fa6705406828cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  isFacingRight: 0
 --- !u!50 &9106561541291583511
 Rigidbody2D:
   serializedVersion: 4
