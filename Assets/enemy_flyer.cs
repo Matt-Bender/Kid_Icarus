@@ -9,10 +9,10 @@ public class enemy_flyer : MonoBehaviour
     public float speed;
     public bool isFacingRight;
 
-    public bool goRight;
-    public bool goLeft;
-    public bool goUp;
-    public bool goDown;
+    //public bool goRight;
+    //public bool goLeft;
+    //public bool goUp;
+    //public bool goDown;
 
     Animator anim;
     public int health;
@@ -80,14 +80,11 @@ public class enemy_flyer : MonoBehaviour
         {
             // Destroy Projectile that collided
             Destroy(c.gameObject);
-            health -= 1; // Remove 1 health on Collision
-                         // Check if health is ZERO
-            if (health <= 0)
-            {
+
                 anim.SetBool("isDead", true);
                 // Destroy GameObject Script is attached to
                 // when health is ZERO (Enemy)
-            }
+            
         }
     }
     void Destroy()
