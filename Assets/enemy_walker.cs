@@ -43,14 +43,18 @@ public class enemy_walker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sr.flipX)
+        if (sr != null)
         {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            if (sr.flipX)
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
         }
-        else
-        {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

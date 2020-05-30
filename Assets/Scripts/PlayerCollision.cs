@@ -40,7 +40,9 @@ public class PlayerCollision : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }    //teleport across screen    private void OnTriggerEnter2D(Collider2D collision)
+    }
+    //teleport across screen
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //going left
         if (pitSprite.flipX == true)
@@ -60,5 +62,6 @@ public class PlayerCollision : MonoBehaviour
         }
 
 
-    }
+    }
+
 }

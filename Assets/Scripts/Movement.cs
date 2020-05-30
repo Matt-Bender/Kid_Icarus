@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
             if (JumpForce > 200)
             {
                 counter++;
-                if(counter >= 5)
+                if(counter >= 3)
                 {
                     JumpForce /= 2;
                 }
