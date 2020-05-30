@@ -28,13 +28,13 @@ public class enemy_walker : MonoBehaviour
         }
             if (speed <= 0)
             {
-                speed = 5.0f;
+                speed = 0.5f;
 
-                Debug.LogWarning("Speed defaulted to 5");
+                Debug.LogWarning("Speed defaulted to 0.5");
             }
             if (health <= 0)
         {
-            health = 5;
+            health = 1;
             Debug.Log("Enemy: Defaulting health to " + health);
         }
         
