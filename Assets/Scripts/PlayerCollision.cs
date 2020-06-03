@@ -29,7 +29,7 @@ public class PlayerCollision : MonoBehaviour
     void OnCollisionEnter2D(Collision2D c)
     {
         // Did GameObject tagged ”Enemy” hit Character
-        if (c.gameObject.tag == "Enemy")
+        if (c.gameObject.tag == "Enemy" || c.gameObject.tag == "Enemy_Projectile")
 {
             health -= 1; // Remove 1 health on Collision
                          // Check if health is ZERO
