@@ -16,6 +16,8 @@ TagManager:
   - BarrierRight
   - EnemyWalk
   - EnemyFly
+  - Enemy_Projectile
+  - Enemy_Undestructable
   layers:
   - Default
   - TransparentFX
