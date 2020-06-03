@@ -18,24 +18,24 @@ public class enemy_walker : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        if (!rb)
-        {
-            Debug.LogWarning("No Rigidbody 2D found...");
-        }
-        if (!sr)
-        {
-            Debug.LogWarning("No SpriteRenderer found...");
-        }
+        //if (!rb)
+        //{
+        //    Debug.LogWarning("No Rigidbody 2D found...");
+        //}
+        //if (!sr)
+        //{
+        //    Debug.LogWarning("No SpriteRenderer found...");
+        //}
             if (speed <= 0)
             {
                 speed = 0.5f;
 
-                Debug.LogWarning("Speed defaulted to 0.5");
+                //Debug.LogWarning("Speed defaulted to 0.5");
             }
             if (health <= 0)
         {
             health = 1;
-            Debug.Log("Enemy: Defaulting health to " + health);
+            //Debug.Log("Enemy: Defaulting health to " + health);
         }
         
     }

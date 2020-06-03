@@ -235,7 +235,7 @@ TextureImporter:
     second: Enemy Spritesheet_76
   - first:
       213: -2938817767158577691
-    second: Enemy Spritesheet_77
+    second: Turret
   - first:
       213: -2581607352874486234
     second: Enemy Spritesheet_78
@@ -247,7 +247,7 @@ TextureImporter:
     second: Enemy Spritesheet_80
   - first:
       213: 507262122972477868
-    second: Enemy Spritesheet_81
+    second: Turret_Projectile
   - first:
       213: -1243526315169044291
     second: Enemy Spritesheet_82
@@ -3918,7 +3918,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_77
+      name: Turret
       rect:
         serializedVersion: 2
         x: 297
@@ -4002,7 +4002,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Spritesheet_81
+      name: Turret_Projectile
       rect:
         serializedVersion: 2
         x: 365
