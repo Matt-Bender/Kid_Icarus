@@ -13,7 +13,6 @@ public class enemy_projectile : MonoBehaviour
         //destroy projectile after lifetime
         Destroy(gameObject, projectileLifeTime);
 
-        projectileSpeed = 5.0f;
 
         rb = GetComponent<Rigidbody2D>();
         //check if rotation has been changed for direction
@@ -34,6 +33,11 @@ public class enemy_projectile : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D c)
     {
+        if (c.gameObject.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
+
         //if (c.gameObject.tag == "Enemy" || c.gameObject.tag == "EnemySquish")
         //{
         //    Destroy(c.gameObject);

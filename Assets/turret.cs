@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class turret : MonoBehaviour
 {
-    //how often projectile fires
+    //turret shoots every fireRate seconds
     public float fireRate;
 
     //projectile being fired
@@ -13,6 +13,8 @@ public class turret : MonoBehaviour
     //location to spawn projectile
     public Transform leftSpawnPoint;
     public Transform rightSpawnPoint;
+
+    bool projectileFired = false;
 
     public bool shootLeft;
     //target to shoot towrads (player)
@@ -40,50 +42,60 @@ public class turret : MonoBehaviour
 
     void shootDirectionCheck()
     {
-        if (target.transform.position.x < transform.position.x)
+        if (target)
         {
-            shootLeft = true;   //shoot left
-        }
-        else
-        {
-            shootLeft = false;  //shoot right
+            if (target.transform.position.x < transform.position.x)
+            {
+                shootLeft = true;   //shoot left
+            }
+            else
+            {
+                shootLeft = false;  //shoot right
+            }
         }
     }
 
     void fireProjectile()
     {
-        shootDirectionCheck();
-        if (shootLeft)
-        {
-            enemy_projectile temp = Instantiate(projectilePrefab, leftSpawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-        }
-        else
-        {
-            //rotate projectile 180 degrees
-            enemy_projectile temp = Instantiate(projectilePrefab, rightSpawnPoint.position, Quaternion.Euler(new Vector3(0, 180.0f, 0)));
-        }
+
+            shootDirectionCheck();
+            if (shootLeft)
+            {
+                Instantiate(projectilePrefab, leftSpawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else
+            {
+                //rotate projectile 180 degrees
+                Instantiate(projectilePrefab, rightSpawnPoint.position, Quaternion.Euler(new Vector3(0, 180.0f, 0)));
+            }
+            projectileFired = false;
+       
+
     }
     void flipTurret()
     {
-        if (target.transform.position.x < transform.position.x && rangedEnemy.flipX == true)
+        if (target)
         {
-            rangedEnemy.flipX = !rangedEnemy.flipX;
-        }
-        if (target.transform.position.x > transform.position.x && rangedEnemy.flipX == false)
-        {
-            rangedEnemy.flipX = !rangedEnemy.flipX;
+            if (target.transform.position.x < transform.position.x && rangedEnemy.flipX == true)
+            {
+                rangedEnemy.flipX = !rangedEnemy.flipX;
+            }
+            if (target.transform.position.x > transform.position.x && rangedEnemy.flipX == false)
+            {
+                rangedEnemy.flipX = !rangedEnemy.flipX;
+            }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Playe shoot");
-            if (Time.time > timeSinceLastFire + fireRate)
-                fireProjectile();
+            if(projectileFired == false)
+            {
+                projectileFired = true;
+                Invoke("fireProjectile", fireRate);
+            }
 
-            timeSinceLastFire = Time.time;
         }
     }
     // Update is called once per frame
