@@ -55,12 +55,12 @@ public class turret : MonoBehaviour
         shootDirectionCheck();
         if (shootLeft)
         {
-            Instantiate(projectilePrefab, leftSpawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            enemy_projectile temp = Instantiate(projectilePrefab, leftSpawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
         }
         else
         {
             //rotate projectile 180 degrees
-            Instantiate(projectilePrefab, rightSpawnPoint.position, Quaternion.Euler(new Vector3(0, 180.0f, 0)));
+            enemy_projectile temp = Instantiate(projectilePrefab, rightSpawnPoint.position, Quaternion.Euler(new Vector3(0, 180.0f, 0)));
         }
     }
     void flipTurret()

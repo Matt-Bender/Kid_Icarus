@@ -151,13 +151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4562b13c00f4b554cac3a9d5126f3140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
-  projectilePrefab: {fileID: 4046325077016841529, guid: eeceb994f076d104d931eb69c5f6849d,
-    type: 3}
+  fireRate: 0
+  projectilePrefab: {fileID: 0}
   leftSpawnPoint: {fileID: 3692460408544364671}
   rightSpawnPoint: {fileID: 3692460409731730038}
   shootLeft: 0
-  target: {fileID: 6343364487045672211, guid: 4cb624a2f53107d45abffd63ff1fa7f0, type: 3}
+  target: {fileID: 0}
   rangedEnemy: {fileID: 3692460408300740498}
 --- !u!1 &3692460408544364640
 GameObject:
