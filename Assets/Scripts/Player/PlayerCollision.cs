@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     public int health;
-    GameManager instance;
 
     Rigidbody2D myRigidBody;
     public Transform tpRight;
@@ -13,21 +12,37 @@ public class PlayerCollision : MonoBehaviour
     public float tpOffset;
 
     public SpriteRenderer pitSprite;
+
+    Transform spawnPoint;
     // Start is called before the first frame update
     void Start()
     {
-        instance = FindObjectOfType<GameManager>();
         myRigidBody = GetComponent<Rigidbody2D>();
-
+        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.transform.position.y < -15)
+        {
+            GameManager.instance.lives -= 1;
+            GameManager.instance.SpawnPlayer(spawnPoint);
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D c)
     {
+        if (c.gameObject.tag == "Player")
+        {
+            GameManager.instance.lives -= 1;
+            GameManager.instance.SpawnPlayer(spawnPoint);
+            Destroy(gameObject);
+        }
+
+
+
         // Did GameObject tagged ”Enemy” hit Character
         if (c.gameObject.tag == "Enemy" || c.gameObject.tag == "Enemy_Projectile")
 {
