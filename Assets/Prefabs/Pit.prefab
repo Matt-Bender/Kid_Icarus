@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51d29be7f701ee44b07da9823e70b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   tpRight: {fileID: 0}
   tpLeft: {fileID: 0}
   tpOffset: 0.2
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 2286427289492861899}
   m_Layer: 0
   m_Name: TurretTarget
-  m_TagString: Untagged
+  m_TagString: TurretTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

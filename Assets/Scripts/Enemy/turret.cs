@@ -18,7 +18,7 @@ public class turret : MonoBehaviour
 
     public bool shootLeft;
     //target to shoot towrads (player)
-    public GameObject target;
+    Transform target;
 
     float timeSinceLastFire = 0;
 
@@ -27,12 +27,7 @@ public class turret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!target)
-        {
-            target = GameObject.FindWithTag("Player");
-
-            shootDirectionCheck();
-        }
+        shootDirectionCheck();
         if (fireRate <= 0)
         {
             fireRate = 1;
@@ -84,6 +79,10 @@ public class turret : MonoBehaviour
             {
                 rangedEnemy.flipX = !rangedEnemy.flipX;
             }
+        }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("TurretTarget").GetComponent<Transform>();
         }
     }
     private void OnTriggerStay2D(Collider2D collision)

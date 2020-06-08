@@ -19,6 +19,8 @@ public class PlayerCollision : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<Transform>();
+        tpRight = GameObject.FindGameObjectWithTag("TPRight").GetComponent<Transform>();
+        tpLeft = GameObject.FindGameObjectWithTag("TPLeft").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 // Destroy GameObject Script is attached to
                 // when health is ZERO (Character)
-                Destroy(gameObject);
+                GameManager.instance.GoGameOver();
             }
         }
     }

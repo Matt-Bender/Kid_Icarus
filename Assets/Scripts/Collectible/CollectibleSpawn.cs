@@ -11,11 +11,11 @@ public class CollectibleSpawn : MonoBehaviour
     {
         int random = Random.Range(0, 3);
 
-        if (random == 0)
+        if (random == 0 || random == 1)
         {
             Instantiate(heartPrefab, gameObject.transform.position, gameObject.transform.rotation);
         }
-        else if (random == 1)
+        else if (random == 2)
         {
             Instantiate(featherPrefab, gameObject.transform.position, gameObject.transform.rotation);
         }

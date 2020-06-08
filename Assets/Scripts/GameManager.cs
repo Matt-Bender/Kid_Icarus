@@ -38,17 +38,30 @@ public class GameManager : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "TitleScreen")
             {
-                SceneManager.LoadScene("Level1");
+                GoLevel();
             }
             else if(SceneManager.GetActiveScene().name == "Level1")
             {
-                SceneManager.LoadScene("GameOver");
+                GoGameOver();
             }
             else if (SceneManager.GetActiveScene().name == "GameOver")
             {
-                SceneManager.LoadScene("TitleScreen");
+                GoTitle();
             }
         }
+    }
+    private void GoLevel()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+    public void GoGameOver()
+    {
+        _score = 0;
+        SceneManager.LoadScene("GameOver");
+    }
+    private void GoTitle()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
     public void SpawnPlayer(Transform spawnLocation)
     {

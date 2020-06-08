@@ -20,6 +20,9 @@ TagManager:
   - Enemy_Undestructable
   - CameraTarget
   - SpawnPoint
+  - TurretTarget
+  - TPRight
+  - TPLeft
   layers:
   - Default
   - TransparentFX

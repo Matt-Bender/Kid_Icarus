@@ -35,7 +35,6 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            Debug.Log(target);
             target = GameObject.FindGameObjectWithTag("CameraTarget").GetComponent<Transform>();
         }
     }
