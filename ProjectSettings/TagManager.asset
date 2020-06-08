@@ -18,6 +18,8 @@ TagManager:
   - EnemyFly
   - Enemy_Projectile
   - Enemy_Undestructable
+  - CameraTarget
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

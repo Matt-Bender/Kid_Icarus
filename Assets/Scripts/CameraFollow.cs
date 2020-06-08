@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
 
     public Transform cameraBoundMin;
 
@@ -35,7 +35,8 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            GameObject.FindGameObjectWithTag("CameraTarget").GetComponent<Transform>();
+            Debug.Log(target);
+            target = GameObject.FindGameObjectWithTag("CameraTarget").GetComponent<Transform>();
         }
     }
 }
