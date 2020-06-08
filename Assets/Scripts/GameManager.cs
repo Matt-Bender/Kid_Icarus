@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     int _score;
     int _lives;
-    bool playerSpawned = true;
 
     public int maxLives;
 
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        _lives = 3;
+        _lives = 5;
     }
 
     // Update is called once per frame
@@ -42,20 +41,15 @@ public class GameManager : MonoBehaviour
             }
             else if(SceneManager.GetActiveScene().name == "Level1")
             {
-                SceneManager.LoadScene("GameOver");
-            }
-            else if (SceneManager.GetActiveScene().name == "GameOver")
-            {
                 SceneManager.LoadScene("TitleScreen");
             }
         }
     }
     public void SpawnPlayer(Transform spawnLocation)
     {
-
             Instantiate(playerPrefab, spawnLocation.position, spawnLocation.rotation);
 
-}
+    }
     public static GameManager instance
     {
         get { return _instance; }
