@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,6 +51,22 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
+
     private void GoLevel()
     {
         SceneManager.LoadScene("Level1");
