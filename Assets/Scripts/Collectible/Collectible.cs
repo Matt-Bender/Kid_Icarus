@@ -19,6 +19,8 @@ public class Collectible : MonoBehaviour
         instance = FindObjectOfType<GameManager>();
         move = FindObjectOfType<Movement>();
         cm = FindObjectOfType<CanvasManager>();
+
+        cm.UpdateScore(instance.score);
     }
     IEnumerator ExampleCoroutine()
     {
