@@ -7,17 +7,18 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     static GameManager _instance = null;
-
     int _score;
     int _lives;
     bool playerSpawned = true;
 
     public int maxLives;
-
     public GameObject playerPrefab;
+
+    CanvasManager cm;
     // Start is called before the first frame update
     void Start()
     {
+        cm = GameObject.Find("CanvasManager").GetComponent<CanvasManager>();
         if (_instance)
         {
             Destroy(gameObject);
@@ -31,7 +32,6 @@ public class GameManager : MonoBehaviour
 
         _lives = 3;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -51,12 +51,15 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void OnClick()
+    {
+        Debug.Log("Clicked Button");
+    }
 
     public void StartGame()
     {
         SceneManager.LoadScene("Level1");
     }
-
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -64,6 +67,10 @@ public class GameManager : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+    public void Return()
+    {
+        QuitGame();
     }
 
 
@@ -88,16 +95,26 @@ public class GameManager : MonoBehaviour
 }
     public static GameManager instance
     {
-        get { return _instance; }
-        set { _instance = value; }
+        get
+        {
+            return _instance;
+        }
+        set
+        {
+            _instance = value;
+        }
 
     }
     public int score
     {
-        get { return _score; }
+        get
+        {
+            return _score;
+        }
         set
         {
             _score = value;
+            cm.UpdateScore(_score);
             Debug.Log("Score is change to " + _score);
         }
     }

@@ -35,7 +35,7 @@ public class enemy_walker : MonoBehaviour
             if (health <= 0)
         {
             health = 1;
-            Debug.Log("Enemy: Defaulting health to " + health);
+            //Debug.Log("Enemy: Defaulting health to " + health);
         }
         
     }

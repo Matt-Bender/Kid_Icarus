@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class CanvasManager : MonoBehaviour
     GameManager gm;
     public Button startButton;
     public Button quitButton;
+    public Button returnButton;
+
+    public TextMeshProUGUI scoreText;
+
+    public GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +27,33 @@ public class CanvasManager : MonoBehaviour
         {
             quitButton.onClick.AddListener(gm.QuitGame);
         }
+        if (returnButton)
+        {
+            returnButton.onClick.AddListener(gm.QuitGame);
+        }
+    }
+    public void UpdateScore(int score)
+    {
+        scoreText.text = score.ToString();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+        }
+        if (pauseMenu)
+        {
+            if (pauseMenu.activeSelf)
+            {
+                Time.timeScale = 0.0f;
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+            }
+        }
+
+
     }
 }
