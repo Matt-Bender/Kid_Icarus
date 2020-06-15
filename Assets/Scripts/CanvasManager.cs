@@ -13,6 +13,7 @@ public class CanvasManager : MonoBehaviour
     public Button returnButton;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
 
     public GameObject pauseMenu;
     // Start is called before the first frame update
@@ -34,8 +35,12 @@ public class CanvasManager : MonoBehaviour
     }
     public void UpdateScore(int score)
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score - " + score.ToString();
     }
+    //public void UpdateLives(int lives)
+    //{
+    //    livesText.text = "Lives - " + lives.ToString();
+    //}
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))

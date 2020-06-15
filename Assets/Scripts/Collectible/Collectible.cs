@@ -12,11 +12,13 @@ public class Collectible : MonoBehaviour
 
     GameManager instance;
     Movement move;
+    CanvasManager cm;
     // Start is called before the first frame update
     void Start()
     {
         instance = FindObjectOfType<GameManager>();
         move = FindObjectOfType<Movement>();
+        cm = FindObjectOfType<CanvasManager>();
     }
     IEnumerator ExampleCoroutine()
     {
@@ -39,6 +41,7 @@ public class Collectible : MonoBehaviour
             {
                 case CollectibleType.HEART:
                     instance.score++;
+                    cm.UpdateScore(instance.score);
                     break;
                 case CollectibleType.GODMODE:
                     break;

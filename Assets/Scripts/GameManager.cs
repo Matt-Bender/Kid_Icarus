@@ -14,11 +14,10 @@ public class GameManager : MonoBehaviour
     public int maxLives;
     public GameObject playerPrefab;
 
-    CanvasManager cm;
+
     // Start is called before the first frame update
     void Start()
     {
-        cm = GameObject.Find("CanvasManager").GetComponent<CanvasManager>();
         if (_instance)
         {
             Destroy(gameObject);
@@ -28,9 +27,7 @@ public class GameManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(this);
         }
-
-
-        _lives = 3;
+        _lives = 5;
     }
     // Update is called once per frame
     void Update()
@@ -114,20 +111,22 @@ public class GameManager : MonoBehaviour
         set
         {
             _score = value;
-            cm.UpdateScore(_score);
             Debug.Log("Score is change to " + _score);
         }
     }
 
     public int lives
     {
-        get { return _lives; }
+        get
+        {
+            return _lives;
+        }
         set
         {
             _lives = value;
             if (_lives > maxLives)
                 _lives = maxLives;
-            Debug.Log("Lives is change to " + _score);
+            Debug.Log("Lives is change to " + _lives);
         }
     }
 }
