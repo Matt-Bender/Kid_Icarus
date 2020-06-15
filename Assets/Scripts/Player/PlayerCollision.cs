@@ -14,6 +14,8 @@ public class PlayerCollision : MonoBehaviour
     public SpriteRenderer pitSprite;
 
     Transform spawnPoint;
+
+    CanvasManager cm;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,9 @@ public class PlayerCollision : MonoBehaviour
         spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<Transform>();
         tpRight = GameObject.FindGameObjectWithTag("TPRight").GetComponent<Transform>();
         tpLeft = GameObject.FindGameObjectWithTag("TPLeft").GetComponent<Transform>();
+
+        cm = FindObjectOfType<CanvasManager>();
+        cm.UpdateLives(health);
     }
 
     // Update is called once per frame
@@ -49,6 +54,7 @@ public class PlayerCollision : MonoBehaviour
         if (c.gameObject.tag == "Enemy" || c.gameObject.tag == "Enemy_Projectile")
 {
             health -= 1; // Remove 1 health on Collision
+            cm.UpdateLives(health);
                          // Check if health is ZERO
             if (health <= 0)
             {

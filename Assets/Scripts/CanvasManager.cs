@@ -37,10 +37,10 @@ public class CanvasManager : MonoBehaviour
     {
         scoreText.text = "Score - " + score.ToString();
     }
-    //public void UpdateLives(int lives)
-    //{
-    //    livesText.text = "Lives - " + lives.ToString();
-    //}
+    public void UpdateLives(int lives)
+    {
+        livesText.text = "Lives - " + lives.ToString();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
