@@ -17,6 +17,6 @@ public class DeathManager : MonoBehaviour
         pitAudio = GetComponent<AudioSource>();
         pitAudio.clip = pitClip;
         pitAudio.Play();
-        Invoke("GameOver", 2.5f);
+        Invoke("GameOver", 3.0f);
     }
 }
