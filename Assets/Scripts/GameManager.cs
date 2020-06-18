@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         _score = 0;
         SceneManager.LoadScene("GameOver");
     }
-    private void GoTitle()
+    public void GoTitle()
     {
         SceneManager.LoadScene("TitleScreen");
     }

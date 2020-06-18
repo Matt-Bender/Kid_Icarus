@@ -8,10 +8,12 @@ public class enemy_walker : MonoBehaviour
     SpriteRenderer sr;
     public float speed;
     public bool isFacingRight;
-
     Animator anim;
-
     public int health;
+
+    public AudioSource walkerAudio;
+    public AudioClip walkerClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,8 @@ public class enemy_walker : MonoBehaviour
             health = 1;
             //Debug.Log("Enemy: Defaulting health to " + health);
         }
-        
+        walkerAudio = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -65,6 +68,10 @@ public class enemy_walker : MonoBehaviour
         }
         
     }
+    void Destroy()
+    {
+        Destroy(gameObject);
+    }
     void OnCollisionEnter2D(Collision2D c)
     {
         // Did GameObject tagged ”Projectile” hit Enemy
@@ -76,6 +83,8 @@ public class enemy_walker : MonoBehaviour
                          // Check if health is ZERO
             if (health <= 0)
             {
+                walkerAudio.clip = walkerClip;
+                walkerAudio.Play();
                 anim.SetBool("isDead", true);
                 // Destroy GameObject Script is attached to
                 // when health is ZERO (Enemy)
@@ -83,8 +92,5 @@ public class enemy_walker : MonoBehaviour
             }
         }
     }
-    void Destroy()
-    {
-        Destroy(gameObject);
-    }
+
 }

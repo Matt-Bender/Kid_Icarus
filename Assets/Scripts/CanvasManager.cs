@@ -16,6 +16,10 @@ public class CanvasManager : MonoBehaviour
     public TextMeshProUGUI livesText;
 
     public GameObject pauseMenu;
+
+    public AudioClip titleScreen;
+    public AudioClip level;
+    public AudioSource pauseAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,9 @@ public class CanvasManager : MonoBehaviour
         {
             returnButton.onClick.AddListener(gm.QuitGame);
         }
+        pauseAudio = GetComponent<AudioSource>();
+        pauseAudio.clip = level;
+        pauseAudio.Play();
     }
     public void UpdateScore(int score)
     {
@@ -46,6 +53,17 @@ public class CanvasManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
+            if (pauseMenu.activeSelf)
+            {
+                pauseAudio.clip = titleScreen;
+                pauseAudio.Play();
+            }
+            else
+            {
+                pauseAudio.clip = level;
+                pauseAudio.Play();
+            }
+
         }
         if (pauseMenu)
         {

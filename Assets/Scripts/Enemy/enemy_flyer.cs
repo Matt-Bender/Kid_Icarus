@@ -16,6 +16,9 @@ public class enemy_flyer : MonoBehaviour
 
     Animator anim;
     public int health;
+
+    public AudioSource flyerAudio;
+    public AudioClip flyerClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,8 @@ public class enemy_flyer : MonoBehaviour
             health = 5;
             Debug.Log("Enemy: Defaulting health to " + health);
         }
+
+        flyerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -84,6 +89,8 @@ public class enemy_flyer : MonoBehaviour
                          // Check if health is ZERO
             if (health <= 0)
             {
+                flyerAudio.clip = flyerClip;
+                flyerAudio.Play();
                 anim.SetBool("isDead", true);
                 // Destroy GameObject Script is attached to
                 // when health is ZERO (Enemy)

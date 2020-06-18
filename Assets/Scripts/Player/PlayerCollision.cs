@@ -16,6 +16,9 @@ public class PlayerCollision : MonoBehaviour
     Transform spawnPoint;
 
     CanvasManager cm;
+
+    public AudioClip fireSFX;
+    public AudioSource playerAudio;
     // Start is called before the first frame update
     void Start()
     {

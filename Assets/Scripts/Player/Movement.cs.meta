@@ -3,7 +3,10 @@ guid: 2d0d648c4d1f69c4c8f911fc8331e23a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - groundCheck: {instanceID: 0}
+  - marioSprite: {instanceID: 0}
+  - jumpSFX: {fileID: 8300000, guid: 6b52451f55bf4a347858e862580b720e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

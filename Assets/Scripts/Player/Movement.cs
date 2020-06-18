@@ -24,6 +24,9 @@ public class Movement : MonoBehaviour
     private int counter = 0;
     //increases by 5 for every feather picked up
     public int featherCount = 0;
+
+    public AudioClip jumpSFX;
+    public AudioSource playerAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,7 @@ public class Movement : MonoBehaviour
         {
             groundCheckRadius = 0.2f;
         }
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -80,6 +84,8 @@ public class Movement : MonoBehaviour
             myRigidBody.velocity = Vector2.zero;
 
             myRigidBody.AddForce(Vector2.up * JumpForce);
+            playerAudio.clip = jumpSFX;
+            playerAudio.Play();
         }
         Crouching();
         lookingUp();

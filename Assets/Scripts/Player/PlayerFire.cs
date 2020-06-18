@@ -13,6 +13,9 @@ public float lifetime;
 public bool isFacingRight;
 public SpriteRenderer pitSprite;
 
+    public AudioClip fireSFX;
+    public AudioSource playerAudio;
+
     // Start is called before the first frame update
     void Start()
 {
@@ -32,7 +35,8 @@ public SpriteRenderer pitSprite;
     {
         speed = 7.0f;
     }
-}
+        playerAudio = GetComponent<AudioSource>();
+    }
 void Update()
 {
     if (Input.GetButtonDown("Fire1"))
@@ -51,7 +55,9 @@ void Update()
 //transform.Rotate(Vector3.forward * 90);
 void createArrow()
 {
-    if (isFacingRight)
+        playerAudio.clip = fireSFX;
+        playerAudio.Play();
+        if (isFacingRight)
     {
         Projectile temp =
         Instantiate(projectilePrefab,
