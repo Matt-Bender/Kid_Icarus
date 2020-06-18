@@ -63,7 +63,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 // Destroy GameObject Script is attached to
                 // when health is ZERO (Character)
-                GameManager.instance.GoGameOver();
+                GameManager.instance.GoDeath();
             }
         }
     }

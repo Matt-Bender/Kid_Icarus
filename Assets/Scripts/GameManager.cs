@@ -84,12 +84,15 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScreen");
     }
+    public void GoDeath()
+    {
+        SceneManager.LoadScene("Death");
+    }
     public void SpawnPlayer(Transform spawnLocation)
     {
 
             Instantiate(playerPrefab, spawnLocation.position, spawnLocation.rotation);
-
-}
+    }
     public static GameManager instance
     {
         get
