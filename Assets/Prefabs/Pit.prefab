@@ -288,13 +288,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51d29be7f701ee44b07da9823e70b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 15
   tpRight: {fileID: 0}
   tpLeft: {fileID: 0}
   tpOffset: 0.2
   pitSprite: {fileID: 2149676562440363816}
-  death: {fileID: 8300000, guid: 6b52451f55bf4a347858e862580b720e, type: 3}
-  playerDeathAudio: {fileID: -9071193326143578423}
+  fireSFX: {fileID: 0}
+  playerAudio: {fileID: 0}
 --- !u!114 &2149676562440363818
 MonoBehaviour:
   m_ObjectHideFlags: 0

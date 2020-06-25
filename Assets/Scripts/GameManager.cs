@@ -88,6 +88,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Death");
     }
+    public void GoVictory()
+    {
+        SceneManager.LoadScene("Victory");
+    }
     public void SpawnPlayer(Transform spawnLocation)
     {
 

@@ -11,6 +11,8 @@ public class CameraFollow : MonoBehaviour
     public Transform cameraBoundMax;
 
     float xMin, xMax, yMin, yMax;
+
+    GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class CameraFollow : MonoBehaviour
         xMax = cameraBoundMax.position.x;
         yMax = cameraBoundMax.position.y;
 
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -30,12 +33,20 @@ public class CameraFollow : MonoBehaviour
     {
         if (target)
         {
-            transform.position = new Vector3(Mathf.Clamp(0, xMin, xMax),
-                Mathf.Clamp (target.position.y, yMin, yMax), transform.position.z);
+            if (target.transform.position.y >= transform.position.y)
+            {
+                transform.position = new Vector3(Mathf.Clamp(0, xMin, xMax),
+                Mathf.Clamp(target.position.y, yMin, yMax), transform.position.z);
+            }
         }
         else
         {
             target = GameObject.FindGameObjectWithTag("CameraTarget").GetComponent<Transform>();
+        }
+
+        if(target.transform.position.y < transform.position.y - 1.4)
+        {
+            gm.GoDeath();
         }
     }
 }
